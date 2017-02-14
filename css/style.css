@@ -3,5 +3,16 @@ h1, h2 {
 }
 
 #map {
+	min-height: 500px;
+}
+
+.reservations {
+	width: 95%;
+}
+
+.form {
 	height: 300px;
+	/*border: 1px solid black;*/
+	overflow: scroll;
+
 }

@@ -11,25 +11,56 @@
 <div class="container-fluid">
    <h1>Monk's Cafe</h1>
    <h2>"The Coffee Shop"</h2>
- <img src="images/toms-restaurant.jpg">
+   	<div class="col-md-12">
+ 		<img id="main_photo" class="img-responsive" src="images/toms-restaurant.jpg" alt="Main Photo">
+ 	</div>	
    <h2>Reservations</h2>
 	<div class="row">
-	  <div class="col-md-6">
+	  <div class="col-md-6 form">
 		  <form id="add-items" action="">
-			<input id="name" type="text" placeholder="item">
-			<input id="date" type="text" placeholder="cost">
-			<button type="submit">Add to list</button>
+			<input id="name" type="text" placeholder="Name">
+			<br><br>
+			<input id="date" type="text" placeholder="Day">
+			<br><br>
+			<button type="submit">Add Reservation</button>
 		 </form>
 	  </div>
-	  <div class="col-md-6">
-		<ul class="reservations">
-		<script id ="reservationOutput" type="text/x-handlebars-template">
-		  <!-- Step 1: Create a handlebars template for a list item with the following format:
-		   		<li>{{item}} - ${{cost}}</li> -->
-		   		<li>{{name}} - {{date}}</li>
+	  <div class="col-md-6 form">
+		<table class="reservations" border="true">
+				<tr><td><b>Name</b></td><td><b>Day</b></td></tr>
+				<script id ="reservationOutput" type="text/x-handlebars-template">
+				   		<tr><td>{{name}}</td><td>{{date}}</td></tr>
+				  </script>
+		</table>
 
-		  </script>
-		</ul>	  
+
+	<!--<form class="form-inline reservation-form">
+      <div class="form-group">
+        <input type="text" class="form-control reservation-name" placeholder="Jane Doe">
+      </div>
+      <div class="form-group">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Select A Day
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu reservation-day">
+            <li><a>Today</a></li>
+            <li><a>Tomorrow</a></li>
+            <li><a>The day after next</a></li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn btn-default reservation-button">Set Reservation</button>
+    </form>
+    <ul class="reservations"></ul>
+  <script id="reservation-template" type="text/x-handlebars-template">
+    <li data-id="{{reservationId}}">
+      <p>Hi, {{name}}. Your reservation is all set for {{day}}.</p>
+    </li>
+  </script> -->
+
+
 	  </div>
 	</div>   
    <h2>Come Dine with Us</h2>
@@ -45,25 +76,9 @@
 	  	<img src="images/jerry.jpg">
 	  </div>
 	  <div class="col-xs-6">
-		  <form class="form-horizontal">
-		  <div class="form-group">
-		    <label for="name" class="col-sm-2 control-label">Name</label>
-		    <div class="col-sm-10">
-		      <input type="name" class="form-control" id="name" placeholder="Name">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="day" class="col-sm-2 control-label">Day</label>
-		    <div class="col-sm-10">
-		      <input type="day" class="form-control" id="day" placeholder="Day">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <div class="col-sm-offset-2 col-sm-10">
-		      <button type="submit" class="btn btn-default">Submit</button>
-		    </div>
-		  </div>
-		</form>
+		  	<p>“Big lettuce, big carrots, tomatoes like volleyballs.”</p>
+			<p> — Jerry Seinfeld, on The BIG Salad</p>
+
 	  </div>
 	</div>
 
@@ -89,23 +104,13 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-	<script>
-      function initMap() {
-        var uluru = {lat: 40.8054491, lng: -73.9654415};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 9,
-          center: uluru
-          //zoomControl: false,
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhrXT1gSkj4CGM6n3rI6GggpBFCDqZhjQ&callback=initMap">
     </script>
     <script src="js/handlebars-v4.0.5.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <!--<script src="js/reservations.js"></script>-->
+
 </body>
 </html>
