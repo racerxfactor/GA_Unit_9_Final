@@ -20,10 +20,11 @@ $('.reservation-day li').on('click', function() {
 
 // when submitted, the name data should be set
 // and all data should be sent to your database
-$('.reservation-form').on('submit', function(event) {
+$('#add-items').on('submit',function(event){
   event.preventDefault();
 
   reservationData.name = $('.reservation-name').val();
+  reservationData.day = $('.reservation-day').val();
 
 
   // create a section for reservations data in your db

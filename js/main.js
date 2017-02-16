@@ -12,24 +12,24 @@
 
 
 //Handlebars
-$('#add-items').on('submit',function(event){
-    event.preventDefault();
+// $('#add-items').on('submit',function(event){
+//     event.preventDefault();
 
-    var userInput = {
-                    name: $('#name').val(),
-                    date: $('#date').val()
-                 };
+//     var userInput = {
+//                     name: $('#name').val(),
+//                     date: $('#date').val()
+//                  };
 
 
 
-    var source = $("#reservationOutput").html();
+//     var source = $("#reservationOutput").html();
 
-    var template = Handlebars.compile(source);
+//     var template = Handlebars.compile(source);
 
-    var newListItemHTML = template(userInput);
+//     var newListItemHTML = template(userInput);
 
-    $('.reservations').append(newListItemHTML);
-});
+//     $('.reservations').append(newListItemHTML);
+// });
 
 
 
