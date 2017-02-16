@@ -18,9 +18,9 @@
 	<div class="row">
 	  <div class="col-md-6 form">
 		  <form id="add-items" action="">
-			<input id="name" type="text" placeholder="Name">
+			<input id="name" type="text" placeholder="Name" class="reservation-name">
 			<br><br>
-			<input id="date" type="text" placeholder="Day">
+			<input id="date" type="text" placeholder="Day" class="reservation-day">
 			<br><br>
 			<button type="submit">Add Reservation</button>
 		 </form>
@@ -34,7 +34,7 @@
 		</table>
 
 
-	<!--<form class="form-inline reservation-form">
+	<form class="form-inline reservation-form">
       <div class="form-group">
         <input type="text" class="form-control reservation-name" placeholder="Jane Doe">
       </div>
@@ -58,7 +58,7 @@
     <li data-id="{{reservationId}}">
       <p>Hi, {{name}}. Your reservation is all set for {{day}}.</p>
     </li>
-  </script> -->
+  </script>
 
 
 	  </div>
@@ -110,7 +110,7 @@
     </script>
     <script src="js/handlebars-v4.0.5.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
-    <!--<script src="js/reservations.js"></script>-->
+    <script src="js/reservations.js"></script>
 
 </body>
 </html>
